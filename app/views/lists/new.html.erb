@@ -1,0 +1,8 @@
+<div class="p-5">
+  <h1 class="display-1">Add List</h1>
+
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  <% end %>
+</div>

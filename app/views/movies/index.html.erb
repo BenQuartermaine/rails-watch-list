@@ -1,0 +1,14 @@
+<div class="d-flex flex-wrap py-5 px-3">
+  <% @movies.each do |m| %>
+    <%= link_to(m, class: "text-dark", style: "text-decoration: none !important;") do %>
+      <div class="card m-2 card-body h-100 shadow d-flex flex-column justify-content-between" style="max-width: 18rem;">
+      <div>
+        <h3 class="font-weight-bold"><%= m.title %></h3>
+        <p><%= m.overview %></p>
+      </div>
+        <img src=<%= m.poster_url %>>
+      </div>
+    <% end %>
+    
+  <% end %>
+</div>
