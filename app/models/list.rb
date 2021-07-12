@@ -3,6 +3,7 @@ class List < ApplicationRecord
   # Why is this through bookmarks?
   ## Bookmarks is the way to add the movie to the list (the list table doesn't store a movie_id)
   has_many :movies, through: :bookmarks
+  has_one_attached :photo
 
   validates :name, uniqueness: true
   

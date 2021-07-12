@@ -1,5 +1,9 @@
 <div class="p-5">
   <h1 class="display-1"><%= @list.name %></h1>
+  <% if @list.photo.attached? %>
+    <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+
 
   <div>
     <%= link_to "Back to view all", lists_path, class: 'btn btn-primary my-3' %>

@@ -6,12 +6,18 @@
   </div>
 </div>
 
-  <div class="py-4">
+  <div class="py-4 d-flex flex-wrap">
     <% @lists.each do |l| %>
+  <div class="card card-body m-2 shadow-sm" style="max-width: 200px;">
+    <% if l.photo.attached? %>
+      <%= cl_image_tag l.photo.key, height: 150, width: 150, crop: :fill %>
+    <% end %>
 
-    <p>
+
+    <h3>
       <%= link_to l.name, list_path(l) %>
-    </p>
+    </h3>
+  </div>
 
     <% end %>
   </div>
